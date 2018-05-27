@@ -1,0 +1,103 @@
+<html>
+
+<body onload="show()">
+
+<button id="Show" onclick="show()">Show</button>
+
+<button id="testing" onclick="testing()">Testing</button>
+
+<button id="greyButton" onclick="grey()">Grey</button>
+<button id="rotation90Button" onclick="rotation90();">Rotation90</button>
+<button id="rotation90gegenButton" onclick="rotation90gegen();">Rotation90gegen</button>
+<button id="rotation180Button" onclick="rotation180();">Rotation180</button>
+<button id="negativeButton" onclick="negative();">Negativ</button>
+<button id="x2Button" onclick="x2();">x2</button>
+<button id="xhalbButton" onclick="xhalb();">xhalb</button>
+<button id="rauschfilterButton" onclick="rausch();">Rauschfilter</button>
+<button id="rotButton" onclick="rot();">Rot</button>
+<button id="kantenButton" onclick="kanten();">Kanten</button>
+<button id="spiegelnHButton" onclick="spiegelnH();">SpiegelnH</button>
+<button id="spiegelnVButton" onclick="spiegelnV();">SpiegelnV</button>
+<button id="size-10" onclick="size10();">Size</button>
+
+<br>
+<br>
+	<a id="link">Save As</a>
+	<style>
+	#link {
+	    float:left;
+	    cursor:pointer;
+	    color:#888;
+	    padding:3px;
+	    border-style: solid;
+	}
+	#link:hover {
+	    color:#000;
+	}
+	</style>
+<br>
+<br>
+<canvas id="leinwand" width="1000" height="500">
+
+</canvas>
+
+<p id= "sayHello"> </p>
+
+<script src="js.js"> </script>
+
+<form name="contrastschwelle">
+Kontrastwert: 
+<input type="button" value="Minus" onclick="contrastminus()" />
+<input type="number" name="contrastwert" min="1">
+<input type="button" value="Plus" onclick="contrastplus()" />
+
+	// Multiplizieren
+</form>
+
+<form name="schwarzschwelle">
+Schwarzwert:
+<input type="number" name="schwarzwert" min="1">
+<input type="button" value="SW" onclick="sw()" />
+</form>
+
+<form name="hellschwelle">
+
+<input type="button" value="Dunkler" onclick="dunkel()" />
+
+<input type="number" name="hellwert" min="1" max="255">
+
+<input type="button" value="Heller" onclick="hell()" />
+</form>
+
+
+FARBEN
+<br>
+<br>
+<input type="button" value="RGB" onclick="RGB()" />
+<form name="rgbschwelle">
+Rotwert:
+<input type="number" name="rotwert" max="255">
+
+Grünwert:
+<input type="number" name="gruenwert" max="255">
+
+Blauwert:
+<input type="number" name="blauwert" max="255">
+
+</form>
+
+
+<script>
+
+var canvas = document.getElementById("leinwand");
+
+</script>
+
+<br>
+<br>
+
+
+</body>
+
+
+</html>
